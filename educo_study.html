@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EduCo</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://use.fontawesome.com/926fe18a63.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+</head>
+<body>
+    <header class="head-fixed">
+        <div class="container">
+            <div class="container-small">
+                <a href="educo_main.html" class="headA">EduCo</a>
+        
+                <button type="button" class="headC">
+                    <span class="fa fa-bars" title="MENU"></span>
+                </button>
+            </div>
+        
+            <nav class="headB">
+                <ul>
+                    <li><a href="educo_study.html">학습</a></li>
+                    <li><a href="educo_comment.html">의견</a></li>
+                    <li><a href="educo_down.html">마이</a></li>
+                    <li><a href="educo_about.html">ABOUT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="main_wrap">
+            <p>무엇을 만들게 될까요?</p>
+            <p>미리보기 버튼을 눌러보세요 :)</p>
+            <p>바로 학습하시려면 각 버튼을 눌러주세요 :)</p>
+            <div class="intro_btn">
+                <p>아무곳이나 클릭해보세요!<br> 학습 내용을 미리 보실 수 있습니다.</p>
+                <button class="html learn_btn"><img src="./images/html.png" alt="html_img" id="html_btn"></button>
+                <button class="css learn_btn"><img src="./images/css.png" alt="css_img" id="css_btn"></button>
+            </div>
+            <!-- 라이트박스 배경 -->
+            <div id="block">
+
+            </div>
+            <!-- 라이트박스 -->
+            <div id="lightbox">
+                <div class="body-container">
+                    <br>
+                    <br>
+                  <center><h1>PREVIEW</h1></center><br>
+                
+                  <div class="flex-container">
+                    <div style="flex-grow: 1"><img src="./educo_study/images/head.png" width="300px;"></div>
+                    <div style="flex-grow: 2; background-color:#2F4661">
+                      <h3>1단계</h3>
+                      <p class="font">제목 입력하는 곳으로, h1태그와 p태그를 연습해봅니다.</p>
+                    </div>
+                  </div>
+                  <div class="flex-container1">
+                    <div style="flex-grow: 1"><img src="./educo_study/images/list.png" width="300px;"></div>
+                    <div style="flex-grow: 2 ; background-color:#2F4661">
+                      <h3>2단계</h3>
+                      <p class="font">캐릭터 리스트를 입력하는 곳으로, <br><br>h2태그와 p태그 그리고 ul/li태그를 연습해봅니다.</p>
+                    </div>
+                  </div>
+                  <div class="flex-container1">
+                    <div style="flex-grow: 1"><img src="./educo_study/images/table.png" width="300px;"></div>
+                    <div style="flex-grow: 2 ; background-color:#2F4661">
+                      <h3>3단계</h3>
+                      <p class="font">캐릭터 소개를 입력하는 곳으로, <br><br>table태그와 img태그를 연습해봅니다.</p></div> 
+                  </div>
+                  <div class="flex-container1">
+                    <div style="flex-grow: 1"><img src="./educo_study/images/video.png" width="300px;"></div>
+                    <div style="flex-grow: 2; background-color:#2F4661">
+                      <h3>4단계</h3>
+                      <p class="font">캐릭터 홍보를 입력하는 곳으로, <br><br>h2태그와 p태그 그리고 video태그를 연습해봅니다.</p></div> 
+                  </div>
+                  <div class="flex-container">
+                    <div style="flex-grow: 1"><img src="./educo_study/images/footer.png" width="300px;"></div>
+                    <div style="flex-grow: 2; background-color:#2F4661">
+                      <h3>5단계</h3>
+                      <p class="font">저작과 관련된 내용을 입력하는 곳으로, <br><br>footer태그와 br태그를 연습해봅니다.</p></div> 
+                  </div>
+                </div>
+                <div class="btn_close" onclick="lightbox_close()">X</div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        $(function(){
+            $(".headC").click(function(){
+                $(".headB").slideToggle();
+            });
+        });
+    </script>
+    <script>
+            var $lightbox = $('#lightbox');
+            var $block = $('#block');
+
+            $('#html_btn').click(function(e){
+                $(location).attr("href", "educo_study/intro.html");
+                e.stopPropagation();
+            })
+            $('#css_btn').click(function(e){
+                $(location).attr("href", "educo_study/css.html");
+                e.stopPropagation();
+            })
+
+            function lightbox_open(){
+                $lightbox.addClass('active');
+                $block.addClass('active');
+            }
+
+            function lightbox_close(){
+                $lightbox.removeAttr('class');
+                $block.removeAttr('class');
+            }
+
+            $('.intro_btn').click(function(){
+                lightbox_open();
+            })
+            $('.btn_close').click(function(){
+                lightbox_close();
+            })
+    </script>
+</body>
+</html>

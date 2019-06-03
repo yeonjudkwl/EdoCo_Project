@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EduCo</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://use.fontawesome.com/926fe18a63.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+</head>
+<body>
+    <header class="head-fixed">
+        <div class="container">
+            <div class="container-small">
+                <a href="educo_main.html" class="headA">EduCo</a>
+        
+                <button type="button" class="headC">
+                    <span class="fa fa-bars" title="MENU"></span>
+                </button>
+            </div>
+            <nav class="headB">
+                <ul>
+                    <li><a href="educo_study.html">학습</a></li>
+                    <li><a href="educo_comment.html">의견</a></li>
+                    <li><a href="educo_down.html">마이</a></li>
+                    <li><a href="educo_about.html">ABOUT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="conA">
+        <div class="container">
+            <div class="photo"><img src="./images/educo.png" alt=""></div>
+            <div class="text">
+                <h2>아직까지<br> <span style="color: #880000; font-size: 40px;">오타</span>로 고생하시나요?</h2>
+                <p>영타 연습은 이제 그만!!!<br>
+                    <span style="color: #880000; font-size: 40px;"><b>클릭</b></span>만으로 코딩하세요<br>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="conB">
+        <div class="container">
+            <div class="photo"><img src="./images/html.png" alt=""></div>
+            <div class="text">
+                <h2>HTML을 배워보아요</h2>
+                <p>버튼으로 html을 작성할 수 있어요!!<br>
+                   오타는 down!! 집중력은 up!!<br>
+                   예제도 만들어보고, 나만의 페이지도 만들어보고.
+                </p>
+                <a href="educo_study/intro.html">html 학습하기
+                <span class="fa fa-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="conC">
+        <div class="container">
+            <div class="photo"><img src="./images/css.png" alt=""></div>
+            <div class="text">
+                <h2>CSS를 배워보아요</h2>
+                <p>html를 작성했으면 이제 색칠 할 시간!<br>
+                   버튼으로 css작성하러 갈 시간!!
+                </p>
+                <a href="educo_study/css.html">css 학습하기
+                <span class="fa fa-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="main_footer">
+        <div class="container">
+            <div class="footA">
+                <h2>EduCo</h2>
+                <nav class="footD">
+                    <ul>
+                        <li><a href="#">
+                            <span class="fa fa-twitter"></span>
+                            <span class="sr-only">Twitter</span>
+                        </a></li>
+        
+                        <li><a href="#">
+                            <span class="fa fa-facebook"></span>
+                            <span class="sr-only">Facebook</span>
+                        </a></li>
+        
+                        <li><a href="#">
+                            <span class="fa fa-google-plus"></span>
+                            <span class="sr-only">Google Plus</span>
+                        </a></li>
+        
+                        <li><a href="#">
+                            <span class="fa fa-instagram"></span>
+                            <span class="sr-only">Instagram</span>
+                        </a></li>
+        
+                        <li><a href="#">
+                            <span class="fa fa-youtube"></span>
+                            <span class="sr-only">YouTube</span>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+        
+            <nav class="footB">
+                <div>
+                    <h3>CONTENTS</h3>
+                    <ul>
+                        <li><a href="educo_study.html">학습</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>CONTENTS</h3>
+                    <ul>
+                        <li><a href="educo_comment.html">의견</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>DOWNLOAD</h3>
+                    <ul>
+                        <li><a href="educo_down.html">마이</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="footC">
+                © EduCo corp. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+    $(function(){
+        $(".headC").click(function(){
+            $(".headB").slideToggle();
+        });
+    });
+    </script>
+</body>
+</html>

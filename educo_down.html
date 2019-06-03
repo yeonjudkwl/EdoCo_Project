@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EduCo</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://use.fontawesome.com/926fe18a63.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        #text {
+            border-right : 2px solid #ddd;
+            width : 1000px;
+            height : 550px;
+            background-color: #303846;
+            color : #fff;
+        }
+        #run {
+            width : 1000px;
+            height : 550px;
+            background-color: #303846;
+            color : #fff;
+        }
+        .body{
+            max-width: 1000px;
+            margin-top: 80px;
+            margin-right: 100px;
+            margin-left: 100px;;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="head-fixed">
+        <div class="container">
+            <div class="container-small">
+                <a href="educo_main.html" class="headA">EduCo</a>
+        
+                <button type="button" class="headC">
+                    <span class="fa fa-bars" title="MENU"></span>
+                </button>
+            </div>
+            <nav class="headB">
+                <ul>
+                    <li><a href="educo_study.html">학습</a></li>
+                    <li><a href="educo_comment.html">의견</a></li>
+                    <li><a href="educo_down.html">마이</a></li>
+                    <li><a href="educo_about.html">ABOUT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="body container">
+        <table>
+            <tr>
+            <td>
+                <textarea rows="80" cols="100">
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                    <meta charset="UTF-8">
+                    <link rel="stylesheet" href="style.css">
+                    <style>
+                        .head_container {
+                            border: 1px solid #fff;
+                            background-color : #FFD801;
+                            color: white;
+                            width : 510px;
+                            height : 100px;
+                            margin-left: 30px;
+                            padding : 10px;
+                            text-align: center;
+                        }
+                        .list_container, .video_container {
+                                border: 1px solid #fff;
+                                background-color: #fff;
+                                color: #2F4661;
+                                width : 510px;
+                                height : 250px;
+                                margin-left: 30px;
+                                padding : 10px;
+                            }
+                        .table_container{
+                            border: 1px solid #fff;
+                            background-color: #fff;
+                            color: #2F4661;
+                            width : 510px;
+                            height : 200px;
+                            margin-left: 30px;
+                            padding : 10px;
+                        }
+                        .video_container {
+                                border: 1px solid #fff;
+                                background-color: #fff;
+                                color: #2F4661;
+                                width : 510px;
+                                height : 350px;
+                                margin-left: 30px;
+                                padding : 10px;
+                            }
+                        a:visited {
+                            text-decoration: none;
+                            color: #2F4661;
+                        }
+                        a:hover {
+                            text-decoration: none;
+                            color: gray;
+                        }
+                        .up{
+                            padding-left:100px;
+                            font-size: 25px;
+                        }
+                        .footer_container {
+                            background-color: #ddd;
+                            color: black;
+                            width : 512px;
+                            height : 40px;
+                            margin-left: 30px;
+                            padding : 10px;
+                        }
+                    </style>
+                    </head>
+                    <body>
+                        <div class="head_container">
+                            <h1>KAKAO FRIENDs</h1>
+                            <p>카카오 프렌즈 페이지 입니다.</p>
+                        </div>
+                        <div class="list_container">
+                        <hr>
+                            <h2>KAKAO INTRODUCTION</h2>
+                            <p>카카오톡과 카카오스토리에서 사용할 수 있는 이모티콘 캐릭터들의 이름이며 사실상 카카오의 마스코트들이다. </p>
+                            <h5>-캐릭터 리스트-</h5>
+                            <ul>
+                                <li><b>RYAN</b>입니다.</li>
+                                <li><i>APEACH</i>입니다.</li>
+                                <li>MUZI&CON입니다.</li>
+                            </ul>
+                        </div>
+                        <div class="table_container">
+                        <hr>
+                            <h2>KAKAO CHARACTER</h2>
+                            <table>
+                                <tr>
+                                    <th>라이언</th>
+                                    <td><img src="./images/ryan.gif" width="100px"></td>
+                                    <td>갈기가 없는게 콤플렉스인 수사자<br> 곰으로 알고 있는 사람이 많지만...<br>사실은 사자!</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="video_container">
+                        <hr>
+                            <h2>KAKAO PROMOTE</h2>
+                            <p=>카카오 프렌즈 크리스마스 스페셜 에디션</p>
+                            <video width="350px" controls>
+                                <source src="./images/kakao_promote.mp4" type="video/mp4">
+                            </video>
+                            <span class='up'><b><a href='#'>위로</a></b></span>
+                        </div>
+                        <footer>
+                            <div class="footer_container">
+                            <footer>
+                            Copyright © EduCo.
+                            <br> Recommend Chrome for this page.
+                            </footer>
+                            </div>
+                        </footer>
+                    </body>
+                    </html>
+                </textarea>
+            </td>
+            <td id="run">
+                <!DOCTYPE html>
+                <html>
+                <head>
+                <meta charset="UTF-8">
+                <link rel="stylesheet" href="style.css">
+                <style>
+                    .head_container {
+                        border: 1px solid #fff;
+                        background-color : #FFD801;
+                        color: white;
+                        width : 510px;
+                        height : 100px;
+                        margin-left: 30px;
+                        margin-right: 30px;
+                        padding : 10px;
+                        text-align: center;
+                    }
+                    .list_container, .video_container {
+                            border: 1px solid #fff;
+                            background-color: #fff;
+                            color: #2F4661;
+                            width : 510px;
+                            height : 250px;
+                            margin-left: 30px;
+                            padding : 10px;
+                        }
+                    .table_container{
+                        border: 1px solid #fff;
+                        background-color: #fff;
+                        color: #2F4661;
+                        width : 510px;
+                        height : 200px;
+                        margin-left: 30px;
+                        padding : 10px;
+                    }
+                    .video_container {
+                            border: 1px solid #fff;
+                            background-color: #fff;
+                            color: #2F4661;
+                            width : 510px;
+                            height : 350px;
+                            margin-left: 30px;
+                            padding : 10px;
+                        }
+                    a:link {
+                        text-decoration: none;
+                        color: #2F4661;
+                    }
+                    a:visited {
+                        text-decoration: none;
+                        color: #2F4661;
+                    }
+                    a:hover {
+                        text-decoration: none;
+                        color: gray;
+                    }
+                    .up{
+                        padding-left:100px;
+                        font-size: 25px;
+                    }
+                    .footer_container {
+                        background-color: #ddd;
+                        color: black;
+                        width : 512px;
+                        height : 40px;
+                        margin-left: 30px;
+                        padding : 10px;
+                    }
+                </style>
+                </head>
+                <body>
+                    <div class="head_container">
+                        <h1>KAKAO FRIENDs</h1>
+                        <p>카카오 프렌즈 페이지 입니다.</p>
+                    </div>
+                    <div class="list_container">
+                    <hr>
+                        <h2>KAKAO INTRODUCTION</h2>
+                        <p>카카오톡과 카카오스토리에서 사용할 수 있는 이모티콘 캐릭터들의 이름이며 사실상 카카오의 마스코트들이다. </p>
+                        <h5>-캐릭터 리스트-</h5>
+                        <ul>
+                            <li><b>RYAN</b>입니다.</li>
+                            <li><i>APEACH</i>입니다.</li>
+                            <li>MUZI&CON입니다.</li>
+                        </ul>
+                    </div>
+                    <div class="table_container">
+                    <hr>
+                        <h2>KAKAO CHARACTER</h2>
+                        <table>
+                            <tr>
+                                <th>라이언</th>
+                                <td><img src="./educo_study/images/ryan.gif" width="100px"></td>
+                                <td>갈기가 없는게 콤플렉스인 수사자<br> 곰으로 알고 있는 사람이 많지만...<br>사실은 사자!</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="video_container">
+                    <hr>
+                        <h2>KAKAO PROMOTE</h2>
+                        <p>카카오 프렌즈 크리스마스 스페셜 에디션</p>
+                        <video width="350px" controls>
+                            <source src="./educo_study/images/kakao_promote.mp4" type="video/mp4">
+                        </video>
+                        <span class='up'><b><a href='#'>위로</a></b></span>
+                    </div>
+                    <footer>
+                        <div class="footer_container">
+                        <footer>
+                            Copyright © EduCo.
+                            <br> Recommend Chrome for this page.
+                        </footer>
+                        </div>
+                    </footer>
+                </body>
+                </html>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    $(function(){
+        $(".headC").click(function(){
+            $(".headB").slideToggle();
+        });
+    });
+</script>
+</body>
+</html>
+
+
+
