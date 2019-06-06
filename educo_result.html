@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EduCo</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://use.fontawesome.com/926fe18a63.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <style>
+        main{
+            margin-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        main > section{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        main > section > article{
+            width: 66%; 
+            overflow: hidden;
+            float: left;
+        }
+        main > section> article > p{
+            line-height: 2;
+            color:rgb(33, 64, 77);
+            margin-left: 10px;
+            margin-bottom: 20px;
+        }
+        main > section > article > #map{
+            width: 100%; height: 442px;
+            background-color: #ccc;
+        }
+        main > section > aside{
+            float: right;
+            width: 34%;
+            box-sizing: border-box;
+            padding: 20px;
+            margin-top: 180px;
+            background-color: rgba(239, 230, 224, 0.5);
+        }
+        main > section > aside > #result{
+            padding: 15px;
+            background-color: rgba(255,255,255,0.5);
+            border-radius: 10px;
+            font-size: 20px;
+            line-height: 2;
+            text-align: center;
+        }
+        /* main > section > aside > .phone > p ,.mail > p , .address > p{
+            padding: 10px;
+            background-color:  rgba(138, 122, 102, 0.6);
+        }
+        main > section > aside > .phone > a ,.mail > a, .address > a{
+            display: block;
+            padding: 10px;
+            background-color: rgba(138, 122, 102, 0.3);
+            text-decoration: none;
+        } */
+    </style>
+</head>
+<body>
+    <header class="head-fixed">
+        <div class="container">
+            <div class="container-small">
+                <a href="educo_main.html" class="headA">EduCo</a>
+                <button type="button" class="headC">
+                    <span class="fa fa-bars" title="MENU"></span>
+                </button>
+            </div>
+            <nav class="headB">
+                <ul>
+                    <li><a href="educo_study.html">학습</a></li>
+                    <li><a href="educo_comment.html">의견</a></li>
+                    <li><a href="educo_down.html">마이</a></li>
+                    <li><a href="educo_about.html">ABOUT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <article>
+                <p><span style="font-size: 20px;"><b>EduCo</b></span>는 프로그래밍을 좀 더 쉽고 빠르게 배울 수 있는 플랫폼입니다.<br>
+                   비전공자들을 위해 항상 고민하고, 또 고민했습니다.<br>
+                   오타로 인한 오류는 이제 걱정마세요!
+                   코드만 생각하고, 이해하세요!<br>
+                   나머지는 <span style="font-size: 20px;"><b>EduCo</b></span>가 합니다 :)
+                </p>
+                <div id="map"><br>&nbsp;지도를 표시할 영역</div>
+            </article>
+            <aside>
+                <div class="name">
+                    <h2>EduCo</h2>
+                </div>
+                <!-- <div class="phone">
+                    <p>PHONE NUMBER</p>
+                    <a href="tel:+8201095903206">010.9590.3206</a>
+                </div>
+                <div class="mail">
+                    <p>E-MAIL</p>
+                    <a href="mailto:yeonju9785@gmail.com">yeonju9785@gmail.com</a>
+                </div>
+                <div class="address">
+                    <p>ADDRESS</p>
+                    <a href="https://www.google.co.kr/maps/place/%EA%B2%BD%EB%B6%81%EB%8C%80%ED%95%99%EA%B5%90+%EB%8C%80%EA%B5%AC%EC%BA%A0%ED%8D%BC%EC%8A%A4/@35.8888707,128.6079715,17z/data=!4m5!3m4!1s0x3565e19e1c03ddbd:0xdc40a75efbd7103c!8m2!3d35.888836!4d128.6102997?hl=ko" target="_blank">경북대학교</a>
+                </div> -->
+                <div id="result"></div>
+            </aside>
+        </section>
+    </main>
+    <script>
+        var map;
+        function initMap() {
+            
+            map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 35.890693, lng: 128.615401},
+            zoom: 15
+            });
+
+            // 마커 객체 생성
+            var marker = new google.maps.Marker({
+                map: map,
+                position: {lat: 35.888486, lng: 128.610160},
+                title: '공대 12호관 입니다.'
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVyZ8WOhqgv_OabQpg3SgCwO72Oo7kEQw&callback=initMap"
+    async defer></script>
+    
+    <script>
+        $(function(){
+            $(".headC").click(function(){
+                $(".headB").slideToggle();
+            });
+        });
+    </script>
+    <script>    
+        var url = window.location.href;
+        var rst = document.getElementById('result');
+
+        rst.innerHTML = "제목 : " + url.split("?")[1].split("&")[0].split("=")[1] + "<br>" + 
+                        "내용 : " +url.split("?")[1].split("&")[1].split("=")[1] + 
+                        "<p>정상적으로 전송되었습니다.<br>소중한 의견 감사드립니다 :)</p>";
+    </script>
+</body>
+</html>
